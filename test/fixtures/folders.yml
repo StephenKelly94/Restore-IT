@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  folder_path: MyString
+  dirty_flag: MyString
+  service_folder_id: 1
+  parent_id: 1
+
+two:
+  name: MyString
+  folder_path: MyString
+  dirty_flag: MyString
+  service_folder_id: 1
+  parent_id: 1
