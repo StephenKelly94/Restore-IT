@@ -28,6 +28,10 @@ def create_files (root)
 end
 
 # Users
+user = User.create(email: "test@test.com", password: "password", password_confirmation: "password")
+["Dropbox", "Onedrive", "Googledrive"].each do |service|
+  create_service(user, service)
+end
 3.times do
   password = FFaker::Internet.password
   user = User.create(email: FFaker::Internet.email, password: password, password_confirmation: password)

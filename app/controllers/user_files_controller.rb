@@ -1,5 +1,6 @@
 class UserFilesController < ApplicationController
-  before_action :get_folder
+  # before_action :authenticate_user
+  before_action :set_folder
   before_action :set_user_file, only: [:show, :update, :destroy]
 
   # GET /user_files
@@ -49,7 +50,7 @@ class UserFilesController < ApplicationController
       params.require(:user_file).permit(:name, :folder_path, :service_file_id)
     end
 
-    def get_folder
+    def set_folder
       service = Service.find_by(id: params[:service_id], user_id: params[:user_id])
       @folder = service.folders.find(params[:folder_id])
     end

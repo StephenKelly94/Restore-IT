@@ -1,5 +1,7 @@
 class ServicesController < ApplicationController
+  # before_action :authenticate_user
   before_action :set_service, only: [:show, :update, :destroy]
+
 
   # GET /services
   def index
@@ -14,8 +16,8 @@ class ServicesController < ApplicationController
 
   # POST /services
   def create
-    user = User.find(params[:user_id])
-    @service = user.services.new(service_params)
+    current_user = User.find(params[:user_id])
+    @service = current_user.services.new(service_params)
 
     if @service.save
       render json: @service, status: :created, location: @service

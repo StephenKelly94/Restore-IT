@@ -11,6 +11,7 @@ class User < ApplicationRecord
                        length: { minimum: 6, maximum: 100 },
                        allow_nil: true
   has_secure_password
+  
   has_many :services
 
 

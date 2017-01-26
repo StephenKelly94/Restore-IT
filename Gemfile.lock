@@ -50,6 +50,10 @@ GEM
     case_transform (0.2)
       activesupport
     concurrent-ruby (1.0.4)
+    dotenv (2.1.1)
+    dotenv-rails (2.1.1)
+      dotenv (= 2.1.1)
+      railties (>= 4.0, < 5.1)
     erubis (2.7.0)
     ffaker (2.2.0)
     ffi (1.9.17)
@@ -141,6 +145,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
   byebug
+  dotenv-rails
   ffaker
   knock
   listen (~> 3.0.5)
